@@ -6,6 +6,28 @@ body {
     -o-background-size: cover;
 }
 
-.imgpad{
+.imgpad {
     padding: 10px;
+    margin-top: 40px;
+}
+
+.imgpad img {
+    border: 1px solid white;
+}
+
+.imgpad h4 {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.imgpad p {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+.imgpad i {
+    color: white;
 }
