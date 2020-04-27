@@ -28,6 +28,19 @@ body {
     text-align: center;
 }
 
-.imgpad i {
+.imgpad a {
+    color: white;
+}
+
+hr {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    border: 0;
+    width: 75%;
+    border-top: 1px solid rgba(255, 255, 255, 1);
+}
+
+h2 {
+    text-align: center;
     color: white;
 }
