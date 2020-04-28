@@ -17,30 +17,54 @@ body {
 
 .imgpad h4 {
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     margin-top: 10px;
 }
 
 .imgpad p {
     color: white;
-    font-size: 14px;
+    font-size: 15px;
     text-align: center;
 }
 
 .imgpad a {
     color: white;
+    font-size: 17px;
+}
+
+.bio {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5rem;
+}
+
+.mechimg img {
+    border: 2px solid white;
 }
 
 hr {
-    margin-top: 0rem;
-    margin-bottom: 0rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     border: 0;
     width: 75%;
     border-top: 1px solid rgba(255, 255, 255, 1);
 }
 
-h2 {
+h2,
+h4 {
     text-align: center;
+    color: white;
+}
+
+.buynow {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.buynow a {
     color: white;
 }
