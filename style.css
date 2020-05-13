@@ -83,7 +83,6 @@ h4 {
 }
 
 .photos img {
-    background: url(Assets/Preview/Alive-background.webp);
     position: absolute;
     background-position: center center;
     background-size: cover;
