@@ -14,32 +14,32 @@
     <!-- Font Awesome -->
     <script src="https://use.fontawesome.com/1e834768de.js"></script>
 
-    <title>Creshna</title>
+    <title>The Official Website of Creshna</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar">
     <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark py-0">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark py-0 fixed-top">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#HOME">HOME <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ALBUMS</a>
+                        <a class="nav-link" href="#ALBUMS">ALBUMS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">MERCH</a>
+                        <a class="nav-link" href="#MERCH">MERCH</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PHOTOS</a>
+                        <a class="nav-link" href="#PHOTOS">PHOTOS</a>
                     </li>
                     <li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">VIDEOS</a>
+                        <a class="nav-link" href="#VIDEOS">VIDEOS</a>
                     </li>
                 </ul>
             </div>
@@ -47,7 +47,7 @@
     </div>
     <div class="container mt-4">
         <div class="row justify-content-center">
-            <div class="col-12">
+            <div id="HOME" class="col-12">
                 <img src="Assets/creshna-logo-3-white.webp" class="img-fluid mx-auto d-block" alt="Creshna Logo">
             </div>
             <div class="row justify-content-center">
@@ -56,7 +56,7 @@
                 </div>
             </div>
         </div>
-        <hr>
+        <hr id="ALBUMS">
         <div class="col-12">
             <h2>ALBUMS</h2>
         </div>
@@ -74,7 +74,7 @@
                 <p><a href="https://creshna.bandcamp.com/album/the-fallout" class="fa fa-bandcamp" aria-hidden="true">Bandcamp</a></p>
             </div>
         </div>
-        <hr>
+        <hr id="MERCH">
         <div class="row justify-content-center">
             <div class="col-12">
                 <h2>MERCH</h2>>
@@ -123,7 +123,7 @@
                 <p class="buynow">Get it on <a href="https://creshna.bandcamp.com/album/the-fallout" class="fa fa-bandcamp" aria-hidden="true">Bandcamp</a></p>
             </div>
         </div>
-        <hr>
+        <hr id="PHOTOS">
         <div class="row justify-content-center">
             <div class="col-12">
                 <h2>PHOTOS</h2>
@@ -149,13 +149,23 @@
                 </div>
             </div>
         </div>
-        <hr>
+        <hr id="VIDEOS">
         <div class="row justify-content-center">
             <div class="col-12">
                 <h2>VIDEOS</h2>>
             </div>
+            <div class="col-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nYjWIh6OS-U?rel=0" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
+        <footer class="page-footer mt-4 py-4">
+            <div class="footer-copyright">© 2020 Creshna
+            </div>
+        </footer>
     </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
