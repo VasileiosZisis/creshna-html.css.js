@@ -82,42 +82,42 @@
             <div class="col-12">
                 <h4>T-SHIRTS</h4>
             </div>
-            <div class="col-2 mechimg">                
-                <img src="Assets/T-Shirt/mix.webp" class="img-fluid mx-auto d-block" alt="t-shirt preview 1">
+            <div class="col-2 mechimg">
+                <img src="Assets/T-Shirt/mix.webp" class="img-fluid mx-auto d-block modalIMG" alt="t-shirt preview 1">
             </div>
             <div class="col-2 mechimg">
-                <img src="Assets/T-Shirt/black-front.webp" class="img-fluid mx-auto d-block" alt="t-shirt preview 2">
+                <img src="Assets/T-Shirt/black-front.webp" class="img-fluid mx-auto d-block modalIMG" alt="t-shirt preview 2">
             </div>
             <div class="col-2 mechimg">
-                <img src="Assets/T-Shirt/white-front.webp" class="img-fluid mx-auto d-block" alt="t-shirt preview 3">
+                <img src="Assets/T-Shirt/white-front.webp" class="img-fluid mx-auto d-block modalIMG" alt="t-shirt preview 3">
             </div>
             <div class="col-2 mechimg">
-                <img src="Assets/T-Shirt/close-logo.webp" class="img-fluid mx-auto d-block" alt="t-shirt preview 4">
+                <img src="Assets/T-Shirt/close-logo.webp" class="img-fluid mx-auto d-block modalIMG" alt="t-shirt preview 4">
             </div>
             <div class="col-12">
                 <p class="buynow">Get it on <a href="https://creshna.bandcamp.com/album/the-fallout" class="fa fa-bandcamp" aria-hidden="true">Bandcamp</a></p>
                 <h4>VINYL/CD</h4>
             </div>
             <div class="col-2 mechimg">
-                <img src="Assets/VINYL-CD/CRESHNA-VINYL-PACKAGE.webp" class="img-fluid mx-auto d-block" alt="vinyl package">
+                <img src="Assets/VINYL-CD/CRESHNA-VINYL-PACKAGE.webp" class="img-fluid mx-auto d-block modalIMG" alt="vinyl package">
             </div>
             <div class="col-2 mechimg">
-                <img src="Assets/VINYL-CD/CRESHNA-VINYL-FRONT.webp" class="img-fluid mx-auto d-block" alt="vinyl front">
+                <img src="Assets/VINYL-CD/CRESHNA-VINYL-FRONT.webp" class="img-fluid mx-auto d-block modalIMG" alt="vinyl front">
             </div>
             <div class="col-2 mechimg">
-                <img src="Assets/VINYL-CD/CRESHNA-VINYL-BACK-SIDE.webp" class="img-fluid mx-auto d-block" alt="vinyl back">
+                <img src="Assets/VINYL-CD/CRESHNA-VINYL-BACK-SIDE.webp" class="img-fluid mx-auto d-block modalIMG" alt="vinyl back">
             </div>
             <div class="col-12">
                 <p class="buynow">Get it on <a href="https://creshna.bandcamp.com/album/there-can-be-no-life-in-the-void" class="fa fa-bandcamp" aria-hidden="true">Bandcamp</a></p>
             </div>
             <div class="col-2 mechimg">
-                <img src="Assets/VINYL-CD/CD-1.webp" class="img-fluid mx-auto d-block" alt="cd preview 1">
+                <img src="Assets/VINYL-CD/CD-1.webp" class="img-fluid mx-auto d-block modalIMG" alt="cd preview 1">
             </div>
             <div class="col-2 mechimg">
-                <img src="Assets/VINYL-CD/CD-2.webp" class="img-fluid mx-auto d-block" alt="cd preview 2">
+                <img src="Assets/VINYL-CD/CD-2.webp" class="img-fluid mx-auto d-block modalIMG" alt="cd preview 2">
             </div>
             <div class="col-2 mechimg">
-                <img src="Assets/VINYL-CD/CD-3.webp" class="img-fluid mx-auto d-block" alt="cd preview 3">
+                <img src="Assets/VINYL-CD/CD-3.webp" class="img-fluid mx-auto d-block modalIMG" alt="cd preview 3">
             </div>
             <div class="col-12">
                 <p class="buynow">Get it on <a href="https://creshna.bandcamp.com/album/the-fallout" class="fa fa-bandcamp" aria-hidden="true">Bandcamp</a></p>
@@ -164,13 +164,18 @@
             </div>
         </div>
 
-        
-        
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="showIMG">
+        </div>
+
         <footer class="page-footer mt-4 py-4">
             <div class="footer-copyright">© 2020 Creshna
             </div>
         </footer>
     </div>
+
+    <script src="main.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
