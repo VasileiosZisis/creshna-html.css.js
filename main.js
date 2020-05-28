@@ -1,7 +1,8 @@
 /*eslint-env browser*/
 /*jslint browser: true*/
 
-// Get the modal
+
+
 var modal = document.getElementById("myModal");
 var i;
 
@@ -13,7 +14,7 @@ for (i = 0; i < img.length; i++) {
 
         modal.style.display = "block";
         modalImg.src = this.src;
-
+        document.body.style.overflow = "hidden";
     }
 }
 
@@ -23,10 +24,12 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
     modal.style.display = "none";
+    document.body.style.overflow = "visible";
 }
 
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
+        document.body.style.overflow = "visible";
     }
 }

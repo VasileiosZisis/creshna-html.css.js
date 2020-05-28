@@ -41,6 +41,10 @@ body {
     margin-top: 5rem;
 }
 
+.mechimg {
+    padding: 10px;
+}
+
 .mechimg img {
     cursor: pointer;
     border: 2px solid white;
@@ -179,4 +183,7 @@ h4 {
   .modal-content {
     width: 100%;
   }
+    .mechimg {
+height: 50%;
+    }
 }
