@@ -8,28 +8,28 @@ body {
     -o-background-size: cover;
 }
 
-.imgpad {
+.album_img {
     padding: 10px;
 }
 
-.imgpad img {
+.album_img img {
     border: 1px solid white;
 }
 
-.imgpad h4 {
+.album_img h4 {
     color: white;
     font-size: 20px;
     text-align: center;
     margin-top: 10px;
 }
 
-.imgpad p {
+.album_img p {
     color: white;
     font-size: 15px;
     text-align: center;
 }
 
-.imgpad a {
+.album_img a {
     color: white;
     font-size: 17px;
 }
@@ -41,11 +41,11 @@ body {
     margin-top: 5rem;
 }
 
-.mechimg {
+.merch_img {
     padding: 10px;
 }
 
-.mechimg img {
+.merch_img img {
     cursor: pointer;
     border: 2px solid white;
 }
@@ -148,9 +148,8 @@ h4 {
 .modal-content {
   margin: auto;
   display: block;
-  height: 100%;
-  width: 100%;
-  max-width: 700px;
+  height: auto;
+  width: auto;
 }
 
 .modal-content, #caption {
@@ -183,7 +182,4 @@ h4 {
   .modal-content {
     width: 100%;
   }
-    .mechimg {
-height: 50%;
-    }
 }
