@@ -1,187 +1,104 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Archivo&family=Montserrat&display=swap"); */
+
+/* :root {
+  --darkGrey: #222629;
+  --mediumGrey: #474a4f;
+  --lightGrey: #808488;
+  --myWhite: #f2f2f2;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+html,
 body {
-    font-family: Georgia, serif;
-    height: 100%;
-    background: url('Assets/Background.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+  height: 100%;
+  min-height: 1000px;
+  /* font-family: "Montserrat", sans-serif; */
 }
-
-.album_img {
-    padding: 10px;
-}
-
-.album_img img {
-    border: 1px solid white;
-}
-
-.album_img h4 {
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.album_img p {
-    color: white;
-    font-size: 15px;
-    text-align: center;
-}
-
-.album_img a {
-    color: white;
-    font-size: 17px;
-}
-
-.bio {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 5rem;
-}
-
-.merch_img {
-    padding: 10px;
-}
-
-.merch_img img {
-    cursor: pointer;
-    border: 2px solid white;
-}
-
-hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border: 0;
-    width: 75%;
-    border-top: 1px solid rgba(255, 255, 255, 1);
-}
-
-h2,
-h4 {
-    text-align: center;
-    color: white;
-}
-
-.buynow {
-    color: white;
-    font-size: 15px;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 1rem;
-}
-
-.buynow a {
-    color: white;
-}
-
-.photos {
-    height: 150px;
-    padding: 0px;
-}
-
-.photos:hover .title {
-    visibility: hidden;
-    opacity: 0;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-}
-
-.photos a {
-    position: absolute;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-}
-
-.title {
-    background: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    line-height: 150px;
-    color: white;
-    font-size: 22px;
-    text-align: center;
-    visibility: visible;
-    opacity: 1;
-}
-
-.footer-copyright {
-    text-align: center;
-    color: white;
-    font-size: 16px;
-}
-
-.photo-gallery img {
-    cursor: pointer;
-    border: 1px solid white;
-}
-
-.figure {
-    margin: 10px;
-}
-
-.figure img {
-    cursor: pointer;
-    height: 180px;
-    width: 180px;
-    border: 1px solid white;
-}
-
-.modal {
-  display: none;
+/* HEADER */
+header {
   position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 0 7rem;
+  background: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: 1s;
+}
+
+header .banner {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.9);
-  overflow: auto;
+  object-fit: cover;
+  transition: 1s;
 }
 
-.modal-content {
-  margin: auto;
-  display: block;
-  height: auto;
-  width: auto;
-  max-width: 1000px;
+header.sticky .banner {
+  opacity: 0.5;
 }
 
-.modal-content, #caption {
-  animation-name: zoom;
-  animation-duration: 0.6s;
+header .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15rem;
+  color: white;
+  transition: 1s;
+  z-index: 1;
 }
 
-@keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
+header.sticky {
+  height: 5rem;
 }
 
-.close {
-  position: fixed;
-  top: 50px;
-  right: 50px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
+header.sticky .logo {
+  position: absolute;
+  font-size: 3rem;
+  left: 6rem;
+  transform: translate(0, -50%);
+}
+/* NAVBAR */
+nav {
+  position: relative;
+  display: flex;
+  z-index: 1;
 }
 
-.close:hover,
-.close:focus {
-  color: #bbb;
-  cursor: pointer;
+nav ul {
+  position: relative;
+  display: flex;
+  transition: 0.25s;
+  transform: translate(7rem);
+  opacity: 0;
 }
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-  .modal-content {
-    width: 100%;
-  }
+header.sticky nav ul {
+  transform: translate(0);
+  opacity: 1;
+  transition-delay: 0.75s;
 }
+
+nav a {
+  color: white;
+  display: inline-block;
+  padding: 1rem 1rem;
+  font-size: 1.5rem;
+}
+/* NAVBAR */
+/* HEADER */
