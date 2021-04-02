@@ -7,12 +7,6 @@
   --myWhite: #f2f2f2;
 } */
 
-.js-loading *,
-.js-loading *:before,
-.js-loading *:after {
-  animation-play-state: paused !important;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +20,7 @@
 html,
 body {
   height: 100%;
-
+  /* background-color: #06080c; */
   /* font-family: "Montserrat", sans-serif; */
 }
 /* HEADER */
@@ -37,7 +31,7 @@ header {
   width: 100%;
   height: 100vh;
   padding: 0 7rem;
-  background-color: black;
+  background-color: #06080c;
   object-fit: cover;
   display: flex;
   justify-content: flex-end;
@@ -131,9 +125,9 @@ section {
 }
 
 .parallax {
-  min-height: 100%;
+  min-height: 40%;
   background-image: url("assets/poster-bottom.jpg");
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -154,40 +148,56 @@ section {
   justify-content: center;
   align-content: center;
   position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, 0);
+  max-width: 750px;
+  top: 0;
+  left: 35%;
+  transform: translateY(50%);
   opacity: 0;
-  transition: top 1s linear, opacity 1s linear;
+  transition: transform 1s linear, opacity 1s linear;
 }
 
 .text p {
   font-size: 1.7rem;
+  line-height: 3rem;
   font-weight: 900;
 }
 
 .textAnimation {
-  top: 0;
+  transform: translateY(0);
   opacity: 1;
 }
-
-.carouselDiv {
-  position: absolute;
-  bottom: 5%;
+/* .carouselDiv {
   overflow-x: scroll;
   overflow-y: hidden;
-  white-space: nowrap;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto;
+  grid-gap: 0 50px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  border-radius: 10px;
 }
 
-.carouselDiv img {
-  padding-right: 2rem;
-  display: inline-block;
+.carouselDiv::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
+
+.carouselItem {
+  padding: 0 10px;
+  height: 240px;
+  width: 250px;
+  border-radius: 5px;
+}
+
+.empty {
+  width: 10px;
+} */
 /* INTRO */
 /* ALBUMS */
 .albumsDiv {
   background-image: url("assets/poster-top.jpg");
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -222,6 +232,8 @@ section {
 
 .albums img {
   border-radius: 2%;
+  display: block;
+  width: 450px;
 }
 /* ALBUMS */
-/* SECTION */ ;
+/* SECTION */

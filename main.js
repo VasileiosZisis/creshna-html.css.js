@@ -1,13 +1,5 @@
 const header = document.querySelector('header');
-const text = document.querySelectorAll('.text');
-
-document.body.classList.add('js-loading');
-
-window.addEventListener("load", showPage);
-
-function showPage() {
-  document.body.classList.remove('js-loading');
-}
+const text = document.querySelectorAll('.observer');
 
 window.addEventListener('scroll', () => {
     header.classList.toggle('sticky', window.scrollY > 0);
