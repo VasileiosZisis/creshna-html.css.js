@@ -1,14 +1,23 @@
 const header = document.querySelector('header');
+
 const animation = document.querySelectorAll('.animation');
+
 const modalEle = document.querySelector('.modal');
 const modalImage = document.querySelector('.modal-content');
 const close = document.querySelector('.close');
 const modalIMG = document.querySelectorAll('.modalIMG')
 
+const slider = document.querySelectorAll('.photosGrid');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+// NO DRAGGING
 window.ondragstart = () => {
      return false; 
     }
 
+// NAVBAR STICKY    
 window.addEventListener('scroll', () => {
     header.classList.toggle('sticky', window.scrollY > 0);
 });
@@ -41,31 +50,34 @@ close.addEventListener("click", () => {
 });
 
 // SLIDER
-const slider = document.querySelector('.photosGrid');
-let isDown = false;
-let startX;
-let scrollLeft;
-
-slider.addEventListener('mousedown', (e) => {
+slider.forEach(item => {
+  item.addEventListener('mousedown', (e) => {
   isDown = true;
-  slider.classList.add('active');
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
+  // item.classList.add('active');
+  startX = e.pageX - item.offsetLeft;
+  scrollLeft = item.scrollLeft;
+  })
 });
-slider.addEventListener('mouseleave', () => {
-  isDown = false;
-  slider.classList.remove('active');
+ slider.forEach(item => {
+   item.addEventListener('mouseleave', () => {
+   isDown = false;
+  //  item.classList.remove('active');
+   })
 });
-slider.addEventListener('mouseup', () => {
-  isDown = false;
-  slider.classList.remove('active');
+ slider.forEach(item => {
+   item.addEventListener('mouseup', () => {
+   isDown = false;
+  //  item.classList.remove('active');
+   })
 });
-slider.addEventListener('mousemove', (e) => {
+slider.forEach(item => {
+  item.addEventListener('mousemove', (e) => {
   if(!isDown) return;
   e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
+  const x = e.pageX - item.offsetLeft;
   const walk = (x - startX) * 1; //scroll-fast
-  slider.scrollLeft = scrollLeft - walk;
+  item.scrollLeft = scrollLeft - walk;
+  })
 });
 
 // BACK TO TOP
@@ -83,7 +95,7 @@ $(document).ready(function($){
     });
   });
   
-  //SMOOTH SCROLL
+//SMOOTH SCROLL
   $(document).ready(function() {
       $("a").on('click', function(event) {
         if (this.hash !== "") {
