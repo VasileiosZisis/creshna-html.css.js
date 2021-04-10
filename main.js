@@ -1,5 +1,9 @@
 const header = document.querySelector('header');
 
+const hamMenu = document.querySelector(".hamMenu");
+const links = document.querySelectorAll("nav li");
+const mediaQuery = window.matchMedia('(min-device-width: 600px)');
+
 const animation = document.querySelectorAll('.animation');
 
 const modalEle = document.querySelector('.modal');
@@ -11,6 +15,18 @@ const slider = document.querySelectorAll('.photosGrid');
 let isDown = false;
 let startX;
 let scrollLeft;
+
+hamMenu.addEventListener("click", function onClick() {
+  console.log(hamMenu);
+  for (let i = 0; i < links.length; i++) {
+    if(links[i].style.display === "none") {
+      links[i].style.display = "flex";
+    }
+    else {
+      links[i].style.display = "none";
+    }
+  }  
+})
 
 // NO DRAGGING
 window.ondragstart = () => {
@@ -81,33 +97,43 @@ slider.forEach(item => {
 });
 
 // BACK TO TOP
-$(document).ready(function($){
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 300) {
-            $(mybutton).fadeIn('slow');
-        } else {
-            $(mybutton).fadeOut('slow');
-        }
-    });
-    $(mybutton).click(function(){
-        $("html, body").animate({ scrollTop: 0 }, 1000);
-        return false;
-    });
+$(document).ready(function($) {
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 300) {
+        $(mybutton).fadeIn('slow');
+    } else {
+          $(mybutton).fadeOut('slow');
+    }
   });
+$(mybutton).click(function(){
+  $("html, body").animate({ scrollTop: 0 }, 1000);
+    return false;
+  });
+});
   
 //SMOOTH SCROLL
-  $(document).ready(function() {
-      $("a").on('click', function(event) {
-        if (this.hash !== "") {
-          event.preventDefault();
+$(document).ready(function() {
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
   
-          var hash = this.hash;
+      var hash = this.hash;
   
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 1000, function(){
-            window.location.hash = hash;
-        });
-      }
-    });
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+        window.location.hash = hash;
+      });
+    }
   });
+});
+
+function handleTabletChange(e) {
+  if (e.matches) {
+    for (let i = 0; i < links.length; i++) {
+      links[i].style.display = "flex";
+    }
+  }
+}
+mediaQuery.addListener(handleTabletChange);
+handleTabletChange(mediaQuery);

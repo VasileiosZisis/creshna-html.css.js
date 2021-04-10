@@ -15,6 +15,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 html,
@@ -84,12 +85,16 @@ nav a {
   color: white;
   display: inline-block;
   padding: 1rem 1rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   transition: color 0.4s;
 }
 
 nav a:hover {
   color: var(--light);
+}
+
+.hamMenu {
+  display: none;
 }
 /* NAVBAR */
 /* HEADER */
@@ -214,7 +219,7 @@ section {
 
 .bottom {
   padding: 1rem 1rem;
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   transform: translateX(50px);
   opacity: 0;
   text-align: center;
@@ -341,11 +346,22 @@ section {
   object-fit: cover;
 }
 /* PHOTOS */
-/* MEDIA */
-.media {
+/* VIDEOS */
+.videosContainer {
   margin-top: 5rem;
+  text-align: center;
 }
-/* MEDIA */
+
+.videosContainer h1 {
+  padding-top: 5rem;
+}
+
+.videosContainer iframe {
+  padding-top: 5rem;
+  width: 58%;
+  height: 450px;
+}
+/* VIDEOS */
 /* SECTION */
 /* FOOTER */
 footer {
@@ -353,9 +369,10 @@ footer {
   text-align: center;
   color: white;
   padding: 1rem;
+  font-size: 1.4rem;
 }
 /* FOOTER */
-/* ANIMTAIONS */
+/* ANIMATIONS */
 .animate {
   animation: moveup 0.5s linear 0.1s forwards;
 }
@@ -370,7 +387,7 @@ footer {
     opacity: 1;
   }
 }
-/* ANIMTAIONS */
+/* ANIMATIONS */
 /* MODAL */
 .modal {
   display: none;
@@ -427,3 +444,32 @@ footer {
   }
 }
 /* MODAL */
+
+@media only screen and (max-width: 600px) {
+  nav ul {
+    display: block;
+    position: fixed;
+    text-align: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    background-color: var(--darkT);
+  }
+
+  nav li {
+    display: none;
+  }
+
+  .hamMenu {
+    display: inline-block;
+    position: fixed;
+    top: 2.5%;
+    right: 3.5%;
+    width: 60px;
+    height: 40px;
+    transition: transform 0.5s;
+  }
+  .hamMenu:hover {
+    cursor: pointer;
+    transform: perspective(50px) translateZ(2px);
+  }
+}
