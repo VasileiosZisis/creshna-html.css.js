@@ -1,8 +1,7 @@
 const header = document.querySelector('header');
 
-const hamMenu = document.querySelector(".hamMenu");
-const links = document.querySelectorAll("nav li");
-const mediaQuery = window.matchMedia('(min-device-width: 600px)');
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
 const animation = document.querySelectorAll('.animation');
 
@@ -16,27 +15,25 @@ let isDown = false;
 let startX;
 let scrollLeft;
 
-hamMenu.addEventListener("click", function onClick() {
-  console.log(hamMenu);
-  for (let i = 0; i < links.length; i++) {
-    if(links[i].style.display === "none") {
-      links[i].style.display = "flex";
-    }
-    else {
-      links[i].style.display = "none";
-    }
-  }  
-})
+const mybutton = document.querySelector('.arrow');
+
+// NAVBAR STICKY    
+window.addEventListener('scroll', () => {
+  header.classList.toggle('sticky', window.scrollY > 0);
+});
+
+// HAMBURGER MENU
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
 
 // NO DRAGGING
 window.ondragstart = () => {
      return false; 
     }
-
-// NAVBAR STICKY    
-window.addEventListener('scroll', () => {
-    header.classList.toggle('sticky', window.scrollY > 0);
-});
 
 // ANIMATION
 observer = new IntersectionObserver((entries) => {
@@ -74,13 +71,13 @@ slider.forEach(item => {
   scrollLeft = item.scrollLeft;
   })
 });
- slider.forEach(item => {
+slider.forEach(item => {
    item.addEventListener('mouseleave', () => {
    isDown = false;
   //  item.classList.remove('active');
    })
 });
- slider.forEach(item => {
+slider.forEach(item => {
    item.addEventListener('mouseup', () => {
    isDown = false;
   //  item.classList.remove('active');
@@ -127,13 +124,3 @@ $(document).ready(function() {
     }
   });
 });
-
-function handleTabletChange(e) {
-  if (e.matches) {
-    for (let i = 0; i < links.length; i++) {
-      links[i].style.display = "flex";
-    }
-  }
-}
-mediaQuery.addListener(handleTabletChange);
-handleTabletChange(mediaQuery);

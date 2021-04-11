@@ -5,26 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Creshna</title>
 </head>
 
 <body>
     <header>
-        <img class="hamMenu" src="assets/navigation-menu.svg" alt="">
         <nav>
-            <ul>
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#Albums">Albums</a></li>
-                <li><a href="#Merch">Merch</a></li>
-                <li><a href="#Photos">Photos</a></li>
-                <li><a href="#Videos">Videos</a></li>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#Home">Home</a></li>
+                <li class="nav-item"><a href="#Albums">Albums</a></li>
+                <li class="nav-item"><a href="#Merch">Merch</a></li>
+                <li class="nav-item"><a href="#Photos">Photos</a></li>
+                <li class="nav-item"><a href="#Videos">Videos</a></li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
-        <img class="logo" src="assets/creshna-logo-3-white.webp" alt="Creshna official logo">
+        <a href="#Home"><img class="logo" src="assets/creshna-logo-3-white.webp" alt="Creshna official logo"></a>
     </header>
     <section>
-        <div class="intro">
+        <div class="intro" id="Home">
             <img src="assets/intro.webp" alt="">
         </div>
         <div class="bandContent">
@@ -50,7 +55,7 @@
         </div>
         <img class="transitionIMG" src="assets/poster-clean.jpg" alt="Creshna Poster">
         <div class="mainContainer">
-            <div class="albumsDiv">
+            <div class="albumsDiv" id="Albums">
                 <h1>ALBUMS</h1>
                 <div class="albumsGrid">
                     <div class="albums">
@@ -68,10 +73,10 @@
                     </div>
                 </div>
             </div>
-            <div class="merchDiv">
+            <div class="merchDiv" id="Merch">
                 <h1>T-SHIRTS</h1>
                 <div class="merchGrid">
-                    <div class="merch">
+                    <div class="merch">11
                         <img class="animation modalIMG" src="assets/T-Shirt-2.jpg"
                             alt="Black and white T-shirt side by side comparison">
                     </div>
@@ -123,7 +128,7 @@
                         class="bottom animation" target="_blank" rel="noopener noreferrer">BUY ON BANDCAMP</a>
                 </div>
             </div>
-            <div class="photosContainer">
+            <div class="photosContainer" id="Photos">
                 <h1>PHOTOS</h1>
                 <p class="top animation">ALIVE 18/3/2017</p>
                 <div class="photosGrid animation">
@@ -160,7 +165,7 @@
                     <img class="item modalIMG" src="assets/Ekko/701943.jpg">
                 </div>
             </div>
-            <div class="videosContainer">
+            <div class="videosContainer" id="Videos">
                 <h1>VIDEOS</h1>
                 <iframe src="https://www.youtube.com/embed/nYjWIh6OS-U" title="Creshna Live Full Concert"
                     frameborder="0"
@@ -171,6 +176,7 @@
                 <span class="close">&times;</span>
                 <img class="modal-content">
             </div>
+            <div class="arrow-top"></div>
         </div>
         <footer>
             <p>© 2021 Creshna</p>
