@@ -8,14 +8,14 @@ const animation = document.querySelectorAll('.animation');
 const modalEle = document.querySelector('.modal');
 const modalImage = document.querySelector('.modal-content');
 const close = document.querySelector('.close');
-const modalIMG = document.querySelectorAll('.modalIMG')
+const modalIMG = document.querySelectorAll('.modal-IMG')
 
-const slider = document.querySelectorAll('.photosGrid');
+const slider = document.querySelectorAll('.photos-grid');
 let isDown = false;
 let startX;
 let scrollLeft;
 
-const mybutton = document.querySelector('.arrow');
+const mybutton = document.querySelector('.arrow-top');
 
 // NAVBAR STICKY    
 window.addEventListener('scroll', () => {
