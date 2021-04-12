@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="jquery-3.5.1.min.js"></script>
+    <script src="splide-2.4.21/dist/js/splide.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="splide-2.4.21/dist/css/splide-core.min.css">
     <title>Creshna</title>
 </head>
 
 <body>
     <header>
-        <nav>
+        <nav role=navigation>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#Home">Home</a></li>
                 <li class="nav-item"><a href="#Albums">Albums</a></li>
@@ -45,10 +47,10 @@
             </div>
             <div class="img-container">
                 <div class="band-IMG-L">
-                    <img class="animation modalIMG" src="assets/band.jpg" alt="Photo of the band colored">
+                    <img class="animation modal-IMG" src="assets/band.jpg" alt="Photo of the band colored">
                 </div>
                 <div class="band-IMG-R">
-                    <img class="animation modalIMG" src="assets/band2.jpg" alt="Photo of the band in black and white">
+                    <img class="animation modal-IMG" src="assets/band2.jpg" alt="Photo of the band in black and white">
                 </div>
             </div>
         </div>
@@ -97,13 +99,13 @@
             <h1>CD/VINYL</h1>
             <div class="merch-grid">
                 <div class="merch">
-                    <img class="animation modalIMG" src="assets/CD 1.jpg" alt="CD case closed">
+                    <img class="animation modal-IMG" src="assets/CD 1.jpg" alt="CD case closed">
                 </div>
                 <div class="merch">
-                    <img class="animation modalIMG" src="assets/CD 2.jpg" alt="CD case opened">
+                    <img class="animation modal-IMG" src="assets/CD 2.jpg" alt="CD case opened">
                 </div>
                 <div class="merch">
-                    <img class="animation modalIMG" src="assets/CD 3.jpg" alt="CD case opened inside">
+                    <img class="animation modal-IMG" src="assets/CD 3.jpg" alt="CD case opened inside">
                 </div>
             </div>
             <div class="buy">
@@ -112,13 +114,13 @@
             </div>
             <div class="merch-grid">
                 <div class="merch">
-                    <img class="animation modalIMG" src="assets/CRESHNA_VINYL_PACKAGE.jpg" alt="Vinyl package">
+                    <img class="animation modal-IMG" src="assets/CRESHNA_VINYL_PACKAGE.jpg" alt="Vinyl package">
                 </div>
                 <div class="merch">
-                    <img class="animation modalIMG" src="assets/CRESHNA_VINYL_FRONT.jpg" alt="Vinyl fron side">
+                    <img class="animation modal-IMG" src="assets/CRESHNA_VINYL_FRONT.jpg" alt="Vinyl fron side">
                 </div>
                 <div class="merch">
-                    <img class="animation modalIMG" src="assets/CRESHNA_VINYL_BACK_SIDE.jpg" alt="Vinyl back side">
+                    <img class="animation modal-IMG" src="assets/CRESHNA_VINYL_BACK_SIDE.jpg" alt="Vinyl back side">
                 </div>
             </div>
             <div class="buy">
@@ -129,55 +131,90 @@
         <div class="photos-container" id="Photos">
             <h1>PHOTOS</h1>
             <p class="top animation">ALIVE 18/3/2017</p>
-            <div class="arrows">
-                <div class="arrow-left"></div>
-                <ul class="photos-grid animation">
-                    <li><img class="item modalIMG" src="assets/Alive/17240085.jpg"></li>
-                    <li><img class="item modalIMG" src="assets/Alive/17240575.jpg"></li>
-                    <li><img class="item modalIMG" src="assets/Alive/17424645.jpg"></li>
-                    <li><img class="item modalIMG" src="assets/Alive/17425034.jpg"></li>
-                    <li><img class="item modalIMG" src="assets/Alive/17434866.jpg"></li>
-                </ul>
-                <div class="arrow-right"></div>
+            <div class="splide animation">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        <div class="arrow-left"></div>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                        <div class="arrow-right"></div>
+                    </button>
+                </div>
+                <div class="splide__track">
+                    <div class="splide__list">
+                        <img class="splide__slide modal-IMG" src="assets/Alive/17240085.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Alive/17240575.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Alive/17424645.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Alive/17425034.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Alive/17434866.jpg">
+                    </div>
+                </div>
             </div>
             <p class="top animation">Kleidi tou Fa 8/4/2016</p>
-            <div class="photos-grid animation">
-                <img class="item modalIMG" src="assets/Fa/12967320.jpg">
-                <img class="item modalIMG" src="assets/Fa/12971032.jpg">
-                <img class="item modalIMG" src="assets/Fa/12973288.jpg">
-                <img class="item modalIMG" src="assets/Fa/12973298.jpg">
-                <img class="item modalIMG" src="assets/Fa/12973526.jpg">
-                <img class="item modalIMG" src="assets/Fa/12976718.jpg">
-                <img class="item modalIMG" src="assets/Fa/12983872.jpg">
-                <img class="item modalIMG" src="assets/Fa/13041141.jpg">
-                <img class="item modalIMG" src="assets/Fa/13041237.jpg">
-                <img class="item modalIMG" src="assets/Fa/13041268.jpg">
+            <div class="splide animation">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        <div class="arrow-left"></div>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                        <div class="arrow-right"></div>
+                    </button>
+                </div>
+                <div class="splide__track">
+                    <div class="splide__list">
+                        <img class="splide__slide modal-IMG" src="assets/Fa/12967320.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Fa/12971032.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Fa/12973288.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Fa/12973298.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Fa/12973526.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Fa/12976718.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Fa/12983872.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Fa/13041141.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Fa/13041237.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Fa/13041268.jpg">
+                    </div>
+                </div>
             </div>
             <p class="top animation">Ekko 11/3/2016</p>
-            <div class="photos-grid animation">
-                <img class="item modalIMG" src="assets/Ekko/10286999.jpg">
-                <img class="item modalIMG" src="assets/Ekko/10623572.jpg">
-                <img class="item modalIMG" src="assets/Ekko/12265891.jpg">
-                <img class="item modalIMG" src="assets/Ekko/12593724.jpg">
-                <img class="item modalIMG" src="assets/Ekko/12633683.jpg">
-                <img class="item modalIMG" src="assets/Ekko/12823369.jpg">
-                <img class="item modalIMG" src="assets/Ekko/12829355.jpg">
-                <img class="item modalIMG" src="assets/Ekko/12841211.jpg">
-                <img class="item modalIMG" src="assets/Ekko/1614122.jpg">
-                <img class="item modalIMG" src="assets/Ekko/701943.jpg">
+            <div class="splide animation">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        <div class="arrow-left"></div>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                        <div class="arrow-right"></div>
+                    </button>
+                </div>
+                <div class="splide__track">
+                    <div class="splide__list">
+                        <img class="splide__slide modal-IMG" src="assets/Ekko/10286999.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Ekko/10623572.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Ekko/12265891.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Ekko/12593724.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Ekko/12633683.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Ekko/12823369.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Ekko/12829355.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Ekko/12841211.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Ekko/1614122.jpg">
+                        <img class="splide__slide modal-IMG" src="assets/Ekko/701943.jpg">
+                    </div>
+                </div>
             </div>
+            <div class="videos-container" id="Videos">
+                <h1>VIDEOS</h1>
+                <iframe src="https://www.youtube.com/embed/nYjWIh6OS-U" title="Creshna Live Full Concert"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content">
+            </div>
+            <button type="button">
+                <div class="arrow-top"></div>
+            </button>
         </div>
-        <div class="videos-container" id="Videos">
-            <h1>VIDEOS</h1>
-            <iframe src="https://www.youtube.com/embed/nYjWIh6OS-U" title="Creshna Live Full Concert" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div>
-        <div class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content">
-        </div>
-        <div class="arrow-top"></div>
         <footer>
             <p>© 2021 Creshna</p>
         </footer>

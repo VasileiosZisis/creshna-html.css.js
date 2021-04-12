@@ -8,12 +8,7 @@ const animation = document.querySelectorAll('.animation');
 const modalEle = document.querySelector('.modal');
 const modalImage = document.querySelector('.modal-content');
 const close = document.querySelector('.close');
-const modalIMG = document.querySelectorAll('.modal-IMG')
-
-const slider = document.querySelectorAll('.photos-grid');
-let isDown = false;
-let startX;
-let scrollLeft;
+const modalIMG = document.querySelectorAll('.modal-IMG');
 
 const mybutton = document.querySelector('.arrow-top');
 
@@ -63,40 +58,19 @@ close.addEventListener("click", () => {
 });
 
 // SLIDER
-slider.forEach(item => {
-  item.addEventListener('mousedown', (e) => {
-  isDown = true;
-  // item.classList.add('active');
-  startX = e.pageX - item.offsetLeft;
-  scrollLeft = item.scrollLeft;
-  })
-});
-slider.forEach(item => {
-   item.addEventListener('mouseleave', () => {
-   isDown = false;
-  //  item.classList.remove('active');
-   })
-});
-slider.forEach(item => {
-   item.addEventListener('mouseup', () => {
-   isDown = false;
-  //  item.classList.remove('active');
-   })
-});
-slider.forEach(item => {
-  item.addEventListener('mousemove', (e) => {
-  if(!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - item.offsetLeft;
-  const walk = (x - startX) * 1; //scroll-fast
-  item.scrollLeft = scrollLeft - walk;
-  })
-});
+var elms = document.getElementsByClassName( 'splide' );
+for ( var i = 0, len = elms.length; i < len; i++ ) {
+	new Splide( elms[ i ], {
+  type   : 'slide',
+  perPage: 4,
+  perMove: 1,
+  } ).mount();
+}
 
 // BACK TO TOP
 $(document).ready(function($) {
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 300) {
+    if ($(this).scrollTop() > 900) {
         $(mybutton).fadeIn('slow');
     } else {
           $(mybutton).fadeOut('slow');
