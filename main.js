@@ -62,8 +62,15 @@ var elms = document.getElementsByClassName( 'splide' );
 for ( var i = 0, len = elms.length; i < len; i++ ) {
 	new Splide( elms[ i ], {
   type   : 'slide',
-  perPage: 4,
   perMove: 1,
+  perPage: 4,
+  breakpoints: {
+		500: {
+			perPage: 1,
+		},
+	},
+  fixedHeight: '300px',
+  fixedWidth: '300px'
   } ).mount();
 }
 
@@ -84,7 +91,7 @@ $(mybutton).click(function(){
   
 //SMOOTH SCROLL
 $(document).ready(function() {
-  $("a").on('click', function(event) {
+  $("nav a").on('click', function(event) {
     if (this.hash !== "") {
       event.preventDefault();
   
