@@ -89,7 +89,7 @@ $(mybutton).click(function(){
   });
 });
   
-//SMOOTH SCROLL
+// SMOOTH SCROLL
 $(document).ready(function() {
   $("nav a").on('click', function(event) {
     if (this.hash !== "") {
