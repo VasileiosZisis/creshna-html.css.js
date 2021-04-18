@@ -10,6 +10,13 @@ const modalImage = document.querySelector('.modal-content');
 const close = document.querySelector('.close');
 const modalIMG = document.querySelectorAll('.modal-IMG');
 
+const modalAudioEleF = document.querySelector('.audio-modal-f');
+const modalImageTriggerF = document.querySelector('.audio-modal-trigger-f');
+const audioCloseF = document.querySelector('.audio-close-f');
+const modalAudioEleT = document.querySelector('.audio-modal-t');
+const modalImageTriggerT = document.querySelector('.audio-modal-trigger-t');
+const audioCloseT = document.querySelector('.audio-close-t');
+
 const mybutton = document.querySelector('.arrow-top');
 
 // NAVBAR STICKY    
@@ -43,7 +50,7 @@ animation.forEach(path => {
     observer.observe(path);
 })
 
-// MODAL BOX
+// MODAL IMG
 modalIMG.forEach(item => {
    item.addEventListener("click", event => {
       modalEle.style.display = "block";
@@ -51,10 +58,33 @@ modalIMG.forEach(item => {
       document.body.style.overflow = "hidden";
    });
 });
-
+window.onclick = function(event) {
+  if (event.target === modalEle) {
+    modalEle.style.display = "none";
+    document.body.style.overflow = "visible";
+  }
+}
 close.addEventListener("click", () => {
    modalEle.style.display = "none";
    document.body.style.overflow = "visible";
+});
+
+// MODAL AUDIO
+modalImageTriggerF.addEventListener('click', event => {
+  modalAudioEleF.style.display ="block";
+  document.body.style.overflow = "hidden";
+});
+audioCloseF.addEventListener("click", () => {
+  modalAudioEleF.style.display = "none";
+  document.body.style.overflow = "visible";
+});
+modalImageTriggerT.addEventListener('click', event => {
+  modalAudioEleT.style.display ="block";
+  document.body.style.overflow = "hidden";
+});
+audioCloseT.addEventListener("click", () => {
+  modalAudioEleT.style.display = "none";
+  document.body.style.overflow = "visible";
 });
 
 // SLIDER
