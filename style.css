@@ -614,6 +614,8 @@ footer a {
   background-color: var(--dark);
   background-color: rgba(0, 0, 0, 0.7);
   overflow: auto;
+  -webkit-animation: zoom 0.6s;
+  animation: zoom 0.6s;
 }
 
 .overlay {
@@ -633,8 +635,6 @@ footer a {
   max-width: 40%;
   height: auto;
   flex-direction: column;
-  -webkit-animation: zoom 0.6s;
-  animation: zoom 0.6s;
 }
 
 .audio-modal-content-f p {
@@ -677,6 +677,8 @@ footer a {
   background-color: var(--dark);
   background-color: rgba(0, 0, 0, 0.7);
   overflow: auto;
+  -webkit-animation: zoom 0.6s;
+  animation: zoom 0.6s;
 }
 
 .audio-modal-content-t {
@@ -690,8 +692,6 @@ footer a {
   max-width: 40%;
   height: auto;
   flex-direction: column;
-  -webkit-animation: zoom 0.6s;
-  animation: zoom 0.6s;
 }
 
 .audio-modal-content-t p {
