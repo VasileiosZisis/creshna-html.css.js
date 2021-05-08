@@ -94,13 +94,13 @@ for ( var i = 0, len = elms.length; i < len; i++ ) {
   type   : 'slide',
   perMove: 1,
   perPage: 4,
+  fixedHeight: '300px',
+  fixedWidth: '300px',
   breakpoints: {
 		500: {
-			perPage: 1,
-		},
-	},
-  fixedHeight: '300px',
-  fixedWidth: '300px'
+			  perPage: 1,
+		  }
+    }
   } ).mount();
 }
 
