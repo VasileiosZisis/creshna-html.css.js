@@ -21,7 +21,7 @@ body {
   height: 100%;
   background-color: var(--black);
   font-family: "Questrial", sans-serif;
-  background-image: url(assets/poster-colored.webp);
+  background-image: url("https://res.cloudinary.com/dmdbza74n/image/upload/v1632761332/creshna/css/poster-colored_dbhejj.webp");
   background-color: var(--black);
   background-size: cover;
   background-repeat: no-repeat;
@@ -159,7 +159,7 @@ p {
 
 .merch-section {
   padding-top: 5rem;
-  background-image: url(assets/space-colored.webp);
+  background-image: url("https://res.cloudinary.com/dmdbza74n/image/upload/v1632761468/creshna/css/space-colored_w6auql.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -185,7 +185,7 @@ p {
 
 .photos-section {
   padding-top: 5rem;
-  background-image: url(assets/feature.webp);
+  background-image: url("https://res.cloudinary.com/dmdbza74n/image/upload/v1632761505/creshna/css/feature_nv16ca.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
