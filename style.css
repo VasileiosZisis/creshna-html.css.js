@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 :root {
   --white: #f7f7f7;
@@ -20,8 +20,8 @@ html,
 body {
   height: 100%;
   background-color: var(--black);
-  font-family: "Questrial", sans-serif;
-  background-image: url("https://res.cloudinary.com/dmdbza74n/image/upload/v1632761332/creshna/css/poster-colored_dbhejj.webp");
+  font-family: 'Questrial', sans-serif;
+  background-image: url('https://res.cloudinary.com/dmdbza74n/image/upload/v1632761332/creshna/css/poster-colored_dbhejj.webp');
   background-color: var(--black);
   background-size: cover;
   background-repeat: no-repeat;
@@ -47,8 +47,13 @@ ul {
 hr {
   margin: 1rem auto auto auto;
   border: 0;
-  width: 450px;
+  transform: scaleX(0.1);
   border-top: 2px solid var(--white);
+  transition: 1s ease-out;
+}
+
+hr.show {
+  transform: scaleX(0.4);
 }
 
 main a {
@@ -65,7 +70,6 @@ h2 {
   color: var(--white);
   text-align: center;
   font-size: 3rem;
-  letter-spacing: 1rem;
 }
 
 p {
@@ -116,6 +120,7 @@ p {
   box-shadow: rgba(247, 246, 247, 0.35) 0px 5px 15px;
   border-radius: 2%;
   max-width: 100%;
+  filter: grayscale(100%);
 }
 
 .band-image-left {
@@ -158,8 +163,7 @@ p {
 }
 
 .merch-section {
-  padding-top: 5rem;
-  background-image: url("https://res.cloudinary.com/dmdbza74n/image/upload/v1632761468/creshna/css/space-colored_w6auql.webp");
+  background-image: url('https://res.cloudinary.com/dmdbza74n/image/upload/v1632761468/creshna/css/space-colored_w6auql.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -185,7 +189,7 @@ p {
 
 .photos-section {
   padding-top: 5rem;
-  background-image: url("https://res.cloudinary.com/dmdbza74n/image/upload/v1632761505/creshna/css/feature_nv16ca.webp");
+  background-image: url('https://res.cloudinary.com/dmdbza74n/image/upload/v1632761505/creshna/css/feature_nv16ca.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -201,7 +205,7 @@ p {
   cursor: pointer;
   position: absolute;
   top: 40%;
-  transition: transform 0.4s ease;
+  transition: transform 0.5s ease-out;
 }
 
 .arrow-right {
@@ -260,6 +264,13 @@ iframe {
   border-radius: 2%;
   margin: 1rem;
   box-shadow: rgba(247, 246, 247, 0.35) 0px 5px 15px;
+  filter: grayscale(100%);
+  transition: filter 0.6s ease-out;
+}
+
+iframe:hover,
+iframe:focus {
+  filter: grayscale(0);
 }
 /* FOOTER */
 footer {
@@ -283,13 +294,14 @@ footer a:focus {
 /* FOOTER */
 /* HOVER */
 .hover {
-  transition: transform 0.4s ease;
+  transition: 0.5s ease-out;
   display: inline-flex;
 }
 
 .hover:hover,
 .hover:focus {
   transform: perspective(50px) translateZ(5px);
+  filter: grayscale(0%);
   -webkit-transform: perspective(50px) translateZ(5px);
   -ms-transform: perspective(50px) translateZ(5px);
 }
@@ -297,6 +309,7 @@ footer a:focus {
 /* MODAL */
 .modal-IMG {
   cursor: pointer;
+  filter: grayscale(100%);
 }
 
 .modal {
@@ -349,7 +362,7 @@ footer a:focus {
   color: var(--white);
   font-size: 4rem;
   font-weight: 600;
-  transition: 0.4s;
+  transition: 0.5s ease-out;
 }
 
 .close:hover,
@@ -381,7 +394,7 @@ footer a:focus {
   height: 30px;
 }
 .circle-1:before {
-  content: "";
+  content: '';
   position: relative;
   display: block;
   width: 300%;
@@ -397,7 +410,7 @@ footer a:focus {
 }
 
 .circle-1:after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -423,7 +436,7 @@ footer a:focus {
   height: 30px;
 }
 .circle-2:before {
-  content: "";
+  content: '';
   position: relative;
   display: block;
   width: 300%;
@@ -439,7 +452,7 @@ footer a:focus {
 }
 
 .circle-2:after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -465,7 +478,7 @@ footer a:focus {
   height: 30px;
 }
 .circle-3:before {
-  content: "";
+  content: '';
   position: relative;
   display: block;
   width: 300%;
@@ -481,7 +494,7 @@ footer a:focus {
 }
 
 .circle-3:after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -585,10 +598,6 @@ footer a:focus {
   .band-image-left {
     max-width: 380px;
   }
-  h1,
-  h2 {
-    letter-spacing: 0.5rem;
-  }
 }
 @media only screen and (max-width: 73.125em) {
   .band-image-left {
@@ -621,9 +630,6 @@ footer a:focus {
   }
   iframe {
     width: 90%;
-  }
-  h1 {
-    letter-spacing: 0.2rem;
   }
 }
 @media only screen and (max-width: 53.125em) {
