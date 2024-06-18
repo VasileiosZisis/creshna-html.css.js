@@ -1,6 +1,6 @@
 # CRESHNA
 
-Visit the website [here](https://creshna.com/)
+An old design of [this website](https://creshna.com/). The new version is made with react.
 
 ### Website for a music band
 
